@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us - Saro's Wellness</title>
+
+    <!-- ✅ GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ✅ BODY */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f4f5f1;
+      }
+
+      /* ✅ HEADER*/
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+        padding: 10px 30px;
+        box-sizing: border-box;
+
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(6px);
+
+        z-index: 1000;
+      }
+
+      /* ✅ LOGO */
+      .logo img {
+        height: 185px;
+        object-fit: contain;
+        position: relative;
+        top: 10px;
+        left: -10px;
+      }
+
+      /* ✅ NAV FIX */
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      nav a {
+        margin-left: 16px;
+        text-decoration: none;
+        color: #264d36;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      nav a:hover {
+        color: #2e7d32;
+      }
+
+      /* ✅ HERO BANNER */
+      .about-hero {
+        height: 300px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .about-hero img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+      }
+
+      /* TEXT */
+      /* ✅ HERO BANNER */
+      .about-hero {
+        height: 300px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* keeps text centered */
+        overflow: hidden;
+      }
+
+      /* ✅ HERO TITLE */
+      .about-hero h1 {
+        position: relative;
+        color: white;
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        text-align: center;
+
+        /* move text slightly lower into true center */
+        top: 60px;
+
+        animation: fadeUp 1.2s ease forwards;
+      }
+
+      /* ✅ MAIN CONTAINER */
+      .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+        width: 85%;
+        margin: 40px auto 100px auto;
+
+        align-items: center;
+      }
+
+      /* ✅ LEFT TEXT */
+      .about-text {
+        animation: fadeUp 1s ease forwards;
+
+        position: relative;
+        top: -100px; /* moves only text upward */
+      }
+
+      .about-text h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        color: #264d36;
+      }
+
+      .about-text h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        color: #264d36;
+        margin-top: 25px;
+      }
+
+      .about-text p {
+        font-size: 15px;
+        color: #4b5f52;
+        line-height: 1.7;
+      }
+
+      /* ✅ RIGHT IMAGE */
+      .about-image img {
+        width: 100%;
+        border-radius: 20px;
+
+        transition: transform 0.5s ease;
+      }
+
+      /* ✅ HOVER EFFECT */
+      .about-image img:hover {
+        transform: scale(1.05);
+      }
+
+      /* ✅ FOOTER */
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background: #2e7d32;
+        color: white;
+      }
+
+      /* ✅ ANIMATION */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ✅ RESPONSIVE */
+      @media (max-width: 768px) {
+        .about-container {
+          grid-template-columns: 1fr;
+        }
+
+        .about-hero h1 {
+          font-size: 32px;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ✅ HEADER -->
+    <header>
+      <div class="logo">
+        <img src="images/banner.jpg" />
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="careandquality.html">Care & Delivery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contactus.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- ✅ HERO -->
+    <section class="about-hero">
+      <img src="images/background.jpg" />
+      <h1>About Saro's Real Taste</h1>
+    </section>
+
+    <!-- ✅ CONTENT -->
+    <section class="about-container">
+      <!-- LEFT -->
+      <div class="about-text">
+        <h2>Our Story</h2>
+
+        <h3>Founder's Note</h3>
+        <p>
+          In loving memory of a mother whose warmth and resilience taught us to
+          balance excellence with care.
+        </p>
+
+        <p>
+          Mindful of my mother’s selfless decision to set aside her career for
+          our family, and of both my own and the next generation’s struggle to
+          balance home and professional life, I began creating convenient
+          premixes, soups and ladoos that bring together nourishment, ease, and
+          time-saving convenience.
+        </p>
+
+        <h3>The Movement</h3>
+        <p>
+          What began as a personal quest has grown into a family-led movement;
+          one pack of quick, nourishing goodness at a time.
+        </p>
+
+        <h3>Quality First</h3>
+        <p>
+          Bring the richness of traditional cooking into your kitchen, without
+          any added preservatives. Our handcrafted premixes are made using
+          natural ingredients to give you real flavour, every time.
+        </p>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="about-image">
+        <img src="images/ammamma.jpg" />
+      </div>
+    </section>
+
+    <!-- ✅ FOOTER -->
+    <div class="footer">© 2026 Saro's Wellness</div>
+  </body>
+</html>

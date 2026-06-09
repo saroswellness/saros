@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Saro's Wellness</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* ✅ BACKGROUND */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: url("images/background.jpg") center/cover no-repeat fixed;
+        padding-top: 140px;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.85);
+        z-index: -1;
+      }
+
+      /* ✅ HEADER*/
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+        padding: 10px 30px;
+        box-sizing: border-box;
+
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(6px);
+
+        z-index: 1000;
+      }
+
+      /* ✅ LOGO */
+      .logo img {
+        height: 185px;
+        object-fit: contain;
+        position: relative;
+        top: 10px;
+        left: -10px;
+      }
+
+      /* ✅ NAV FIX */
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      nav a {
+        margin-left: 16px;
+        text-decoration: none;
+        color: #264d36;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      nav a:hover {
+        color: #2e7d32;
+      }
+
+      /* ✅ HERO FULL BANNER */
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 400px; /* ✅ banner height */
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ✅ BACKGROUND IMAGE */
+      .hero-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        filter: brightness(0.65); /* ✅ dark overlay effect */
+      }
+
+      /* ✅ TEXT OVER IMAGE */
+      .hero-text {
+        position: relative;
+        z-index: 2;
+
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        color: #e3ede7;
+
+        text-align: center;
+        padding: 0 20px;
+        max-width: 900px;
+
+        /* ✅ BEAUTIFUL ANIMATION */
+        opacity: 0;
+        transform: translateY(30px);
+
+        animation: fadeUp 1.5s ease forwards;
+      }
+
+      /* ✅ KEYFRAME ANIMATION */
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ✅ WELCOME */
+      .welcome {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .features span {
+        background: #2e7d32;
+        color: white;
+        padding: 6px 14px;
+        margin: 5px;
+        border-radius: 20px;
+      }
+
+      /* ✅ INFO */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 40px auto;
+      }
+
+      .info-card {
+        background: #c8d6b3;
+        padding: 30px;
+        border-radius: 30px;
+      }
+
+      .info-card h2,
+      .main-title h2 {
+        font-family: "Playfair Display", serif;
+        color: #264d36;
+      }
+
+      .info-card p {
+        color: #264d36;
+      }
+
+      /* ✅ TITLE */
+      .main-title {
+        text-align: center;
+        margin: 50px 0 20px;
+      }
+
+      /* ✅ CAROUSEL */
+      .carousel-wrapper {
+        position: relative;
+        width: 95%;
+        margin: auto;
+      }
+
+      /* ✅ SCROLL */
+      .scroll-row {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-padding-left: 20px;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+      }
+
+      .scroll-row::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* ✅ CARD */
+      .product {
+        flex: 0 0 auto;
+        width: 260px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+
+        position: relative; /* ✅ needed for zoom */
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .product:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ✅ WRAP IMAGE (ADD THIS NEW CLASS) */
+      .product-image {
+        overflow: hidden; /* ✅ hides zoom overflow */
+      }
+
+      /* ✅ IMAGE */
+      .product img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+
+        transition: transform 0.4s ease; /* ✅ smooth zoom */
+      }
+
+      /* ✅ ✅ HOVER ZOOM EFFECT */
+      .product:hover img {
+        transform: scale(1.12); /* ✅ zoom level */
+      }
+
+      /* ✅ BUTTON */
+      .order-btn {
+        display: inline-block;
+        background: #25d366;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin: 10px 0;
+        text-decoration: none;
+      }
+
+      /* ✅ ✅ FIXED ARROWS (MAIN FIX) */
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 45px;
+        height: 45px;
+
+        background: white;
+        border: none;
+        border-radius: 50%;
+
+        font-size: 18px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 20;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      /* ✅ CORRECT POSITION */
+      .left {
+        left: 10px;
+      }
+
+      .right {
+        right: 10px;
+      }
+
+      /* ✅ FOOTER */
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background: #2e7d32;
+        color: white;
+      }
+
+      /* ✅ WHY SECTION */
+      .why-section {
+        padding: 20px 5% 60px;
+        margin-top: -30px;
+      }
+
+      /* ✅ TITLE */
+      .why-title {
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        color: #264d36;
+        margin-bottom: 40px;
+      }
+
+      /* ✅ GRID */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+
+      /* ✅ CARD */
+      .why-card {
+        background: #c8d6b3;
+        padding: 25px;
+        border-radius: 25px;
+        text-align: left;
+
+        transition: 0.3s;
+      }
+
+      /* hover effect */
+      .why-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* ✅ ICON */
+      .icon {
+        width: 55px;
+        height: 55px;
+        background: #1f4d2b;
+        color: white;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      /* ✅ SMALL LABEL */
+      .why-card h5 {
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #2e5d3b;
+      }
+
+      /* ✅ TITLE */
+      .why-card h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+        color: #183d2a;
+      }
+
+      /* ✅ TEXT */
+      .why-card p {
+        color: #2e5d3b;
+        font-size: 14px;
+      }
+
+      /* ✅ PROMISE */
+      .promise {
+        margin-top: 60px;
+      }
+
+      .promise h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        color: #183d2a;
+      }
+
+      .promise p {
+        font-size: 18px;
+        max-width: 900px;
+      }
+
+      /* ✅ WHATSAPP BUTTON SECTION */
+      .whatsapp-order {
+        text-align: center;
+        margin: 30px 0 50px;
+      }
+
+      /* ✅ BUTTON */
+      .whatsapp-btn {
+        display: inline-block;
+
+        background: #25d366;
+        color: white;
+
+        padding: 14px 30px;
+        border-radius: 40px;
+
+        font-size: 18px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition: all 0.3s ease;
+
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* ✅ HOVER EFFECT */
+      .whatsapp-btn:hover {
+        background: #1ebe5d;
+        transform: scale(1.05);
+      }
+
+      /* ✅ REVIEWS SECTION */
+      .reviews-section {
+        padding: 30px 5% 60px;
+        margin-top: -60px;
+      }
+
+      /* TITLE */
+      .reviews-title {
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 36px;
+        color: #264d36;
+      }
+
+      /* SUBTITLE */
+      .reviews-subtitle {
+        font-size: 18px;
+        color: #4b5f52;
+        margin: 10px auto 40px;
+        max-width: 800px;
+      }
+
+      /* GRID */
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      /* CARD */
+      .review-card {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      /* STARS */
+      .stars {
+        color: #264d36;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      /* TEXT */
+      .review-card p {
+        font-size: 16px;
+        color: #2e3d32;
+        line-height: 1.6;
+      }
+
+      /* NAME */
+      .review-card h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 26px;
+        color: #264d36;
+        margin-top: 8px;
+        margin-bottom: 4px;
+      }
+
+      /* ROLE */
+      .review-card span {
+        font-size: 14px;
+        color: #5c6f63;
+        margin-top: 0;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ✅ HEADER -->
+    <header>
+      <div class="logo">
+        <img src="images/banner.jpg" />
+      </div>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="careandquality.html">Care & Delivery</a>
+        <a href="#reviews-section">Reviews</a>
+        <a href="contactus.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- ✅ HERO -->
+    <section class="hero">
+      <img src="images/centerlogo-new.jpg" class="hero-bg" />
+
+      <div class="hero-text">Tradition and Nutrition in Every Spoon</div>
+    </section>
+
+    <!-- ✅ WELCOME -->
+    <section class="welcome">
+      <h2>Your journey to better health begins here.</h2>
+      <p>Premixes and Protein Balls</p>
+
+      <div class="features">
+        <span>Quick</span>
+        <span>Easy</span>
+        <span>Nutritious</span>
+        <span>Delicious</span>
+      </div>
+    </section>
+
+    <!-- ✅ INFO -->
+    <section class="info-grid">
+      <div class="info-card">
+        <h2>Food Premixes</h2>
+        <p>Authentic Kerala flavors made easy in minutes.</p>
+      </div>
+
+      <div class="info-card">
+        <h2>Wellness Ladoos</h2>
+        <p>Nutritious energy boosters for daily health.</p>
+      </div>
+    </section>
+
+    <!-- ✅ PRODUCTS -->
+    <section id="products">
+      <div class="main-title">
+        <h2>Featured Products</h2>
+      </div>
+
+      <div class="carousel-wrapper">
+        <!-- ✅ LEFT BUTTON -->
+        <button class="arrow left" id="leftBtn">❮</button>
+
+        <div class="scroll-row" id="carousel">
+          <div class="product">
+            <div class="product-image">
+              <img src="images/biriyanipremix.jpg" />
+            </div>
+            <p>Biriyani</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/sambarpremix.jpg" />
+            </div>
+            <p>Sambar</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/vartharchapremix.jpg" />
+            </div>
+            <p>Varutharacha</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/chanapremix.jpg" />
+            </div>
+            <p>Chana</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/kurumapremix.jpg" />
+            </div>
+            <p>Kuruma</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/kadaipremix.jpg" />
+            </div>
+            <p>Kadai</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/moringapremix.jpg" />
+            </div>
+            <p>Millet-Moringa Soup</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/theeyalpremix.jpg" />
+            </div>
+            <p>Theeyal</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/wellnessladoonosugar.jpg" />
+            </div>
+            <p>Wellness Ladoo (No Sugar Added)</p>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/milletcookie.jpg" />
+            </div>
+            <p>Millet Cookies</p>
+          </div>
+        </div>
+
+        <!-- ✅ RIGHT BUTTON -->
+        <button class="arrow right" id="rightBtn">❯</button>
+      </div>
+    </section>
+
+    <!-- ✅ WHATSAPP ORDER BUTTON -->
+    <section class="whatsapp-order">
+      <a href="https://wa.me/916238198001" target="_blank" class="whatsapp-btn">
+        Order Now on WhatsApp
+      </a>
+    </section>
+
+    <section class="why-section">
+      <h2 class="why-title">Why Choose Saro's Real Taste?</h2>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon">✓</div>
+          <h5>REGISTRATION</h5>
+          <h3>FSSAI Registered</h3>
+          <p>
+            Ensuring the highest safety and quality standards for your family.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icon">🌱</div>
+          <h5>INGREDIENTS</h5>
+          <h3>100% Natural</h3>
+          <p>
+            Authentic Kerala flavors using only wholesome, unprocessed
+            ingredients.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icon">✅</div>
+          <h5>QUALITY</h5>
+          <h3>No Added Preservatives</h3>
+          <p>
+            Pure, fresh taste without any artificial additives or chemical
+            fillers.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icon">👩</div>
+          <h5>LEADERSHIP</h5>
+          <h3>Women-Led</h3>
+          <p>
+            Handcrafted by a passionate women-led team that cooks with the same
+            care as home.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icon">⏱</div>
+          <h5>CONVENIENCE</h5>
+          <h3>Ready in Minutes</h3>
+          <p>
+            Effortless preparation for busy schedules and professional kitchens.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icon">❤️</div>
+          <h5>TASTE</h5>
+          <h3>Homemade Taste</h3>
+          <p>
+            Slow-roasted spices and traditional recipes that taste just like
+            food from home.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="icon">🥗</div>
+          <h5>HEALTH</h5>
+          <h3>No Added Refined Oil</h3>
+          <p>Enjoy full flavour with less heaviness — no added refined oil.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="icon">📍</div>
+          <h5>ORIGIN</h5>
+          <h3>Kerala Tradition</h3>
+          <p>Rooted in the culinary heritage of Kerala.</p>
+        </div>
+      </div>
+
+      <div class="promise">
+        <h2>OUR PROMISE</h2>
+        <p>
+          At Saro's Real Taste, we believe food should be:
+          <strong>Simple, Tasty Yet Healthy, Authentic.</strong>
+          We bring you the taste of home without compromise.
+        </p>
+      </div>
+    </section>
+
+    <section id="reviews-section" class="reviews-section">
+      <h2 class="reviews-title">What Our Customers Say</h2>
+
+      <p class="reviews-subtitle">
+        Real taste, real feedback. Discover why thousands of families across
+        Kerala and beyond trust Saro's Real Taste.
+      </p>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            "Just like my father's (bandari) sambar and chicken curry! The
+            authentic Kerala flavor is unmatched."
+          </p>
+          <h4>Rajitha</h4>
+          <span>Calicut, YouTuber</span>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Thanks a ton Dr. Sindhu for sending me the Saros pre mix sambar from
+            down South Kerala to the northern Himalayas 😍❤️ Just tasted
+            it....its so so fresh and temptingly tasty!!! 😊😊
+          </p>
+          <h4>Hari Priya Patak</h4>
+          <span>Nainital, Professor</span>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            "Kadhai premix is a total life saver...quick tasty n full of
+            flavour...perfect for busy days."
+          </p>
+          <h4>Hema Vishwadhar</h4>
+          <span>Palakad, Business Partner</span>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>"Adipoli curry in 10 minute."</p>
+          <h4>Sheela K.T</h4>
+          <span>Calicut, Home Maker</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© 2026 Saro's Wellness</div>
+
+    <
+    <script>
+      const carousel = document.getElementById("carousel");
+      const leftBtn = document.getElementById("leftBtn");
+      const rightBtn = document.getElementById("rightBtn");
+
+      /* ✅ GET CARD SIZE */
+      function getAmount() {
+        return document.querySelector(".product").offsetWidth + 20;
+      }
+
+      /* ✅ RIGHT BUTTON */
+      rightBtn.addEventListener("click", () => {
+        carousel.scrollBy({
+          left: getAmount(),
+          behavior: "smooth",
+        });
+      });
+
+      /* ✅ ✅ LEFT BUTTON (FINAL FIX) */
+      leftBtn.addEventListener("click", () => {
+        carousel.scrollBy({
+          left: -getAmount(),
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

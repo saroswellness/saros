@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Recipes - Saro's Wellness</title>
+
+    <!-- ✅ GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ✅ BODY */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f4f5f1;
+        padding-top: 140px;
+      }
+
+      /* ✅ HEADER*/
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+        padding: 10px 30px;
+        box-sizing: border-box;
+
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(6px);
+
+        z-index: 1000;
+      }
+
+      /* ✅ LOGO */
+      .logo img {
+        height: 185px;
+        object-fit: contain;
+        position: relative;
+        top: 10px;
+        left: -10px;
+      }
+
+      /* ✅ NAV FIX */
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      nav a {
+        margin-left: 16px;
+        text-decoration: none;
+        color: #264d36;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      nav a:hover {
+        color: #2e7d32;
+      }
+
+      /* ✅ HERO */
+      .recipes-hero {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .recipes-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        color: #264d36;
+      }
+
+      .recipes-hero p {
+        color: #4b5f52;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      /* ✅ RECIPE BLOCK */
+      .recipe-block {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 40px;
+
+        width: 90%;
+        margin: 50px auto;
+
+        align-items: start;
+      }
+
+      /* ✅ IMAGE */
+      .recipe-image img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      /* ✅ DETAILS */
+      .recipe-details h2 {
+        font-family: "Playfair Display", serif;
+        color: #264d36;
+        font-size: 32px;
+      }
+
+      .recipe-details p {
+        font-size: 15px;
+        color: #2e5d3b;
+        line-height: 1.6;
+        margin: 8px 0;
+      }
+
+      /* ✅ BUTTON */
+      .order-btn {
+        display: inline-block;
+        margin-top: 20px;
+
+        background: #1f4d2b;
+        color: white;
+
+        padding: 12px 25px;
+        border-radius: 30px;
+
+        text-decoration: none;
+        font-weight: 500;
+
+        transition: 0.3s;
+      }
+
+      .order-btn:hover {
+        transform: scale(1.05);
+        background: #163922;
+      }
+
+      /* ✅ FOOTER */
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background: #2e7d32;
+        color: white;
+      }
+
+      /* ✅ MOBILE */
+      @media (max-width: 768px) {
+        .recipe-block {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ✅ HEADER -->
+    <header>
+      <div class="logo">
+        <img src="images/banner.jpg" />
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="careandquality.html">Care & Delivery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contactus.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- ✅ HERO -->
+    <section class="recipes-hero">
+      <h1>Recipes</h1>
+      <p>
+        Step-by-step guides for authentic Kerala flavors, designed for your busy
+        kitchen.
+      </p>
+    </section>
+
+    <!-- ✅ BIRIYANI -->
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/biriyanipremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Biriyani Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50g (Serves 2–3) / 100g (Serves 4–5)
+        </p>
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage:</strong> Keep refrigerated. Store airtight after
+          opening. Store in an airtight container for best results.
+        </p>
+
+        <p>
+          Marinate chicken / paneer / mixed vegetables / soya with a small
+          portion of Saro’s Premix, yoghurt, and salt. Keep aside for 15
+          minutes. Heat ghee or oil in a pan and sauté freshly chopped onions
+          until golden. Add chopped tomatoes, salt, and the remaining premix.
+          Sauté for 2 minutes. Add the marinated chicken/ paneer / vegetables /
+          soya and sauté for 2–3 minutes. Cover and cook until done. Add cooked
+          basmati or jeerakasala rice (cooked with salt). Mix gently, cover, and
+          cook on low flame (dum) for 5 minutes. For a Kashmiri Pulao twist, add
+          freshly chopped fruits and nuts such as pomegranate, apple, grapes,
+          raisins, almonds, and cashews. Garnish with fresh coriander leaves
+          before serving.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Biriyani Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ SAMBAR -->
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/sambarpremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Sambar Premix</h2>
+
+        <p><strong>Approx. Weight:</strong> 50g / 100g</p>
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage:</strong> Keep refrigerated. Ensure the pack is
+          tightly closed after use. Store in an airtight container for best
+          results.
+        </p>
+
+        <p>
+          In a pressure cooker, mix Saro’s Premix with warm water, chopped
+          vegetables, and salt. Pressure cook for 2 whistles. Open the lid and
+          simmer until the sambar thickens to your desired consistency. Serve
+          hot with rice, idli, dosa, or any of your favourite dishes. For a
+          darker, richer sambar flavour, dry roast the premix until dark brown
+          before cooking.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Sambar Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ VARUTHARACHA -->
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/vartharchapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Varutharacha Curry Premix</h2>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+        <p>
+          <strong>Storage:</strong> Keep refrigerated. Ensure the pack is
+          tightly closed after use. Store in an airtight container for best
+          results.
+        </p>
+
+        <p>
+          Heat coconut oil in a pressure cooker and sauté freshly chopped onions
+          until golden. Add black chana (kadala) / mixed vegetables / paneer /
+          mushrooms / chicken as per your choice. Add Saro’s Premix, salt, and
+          water. Mix well and pressure cook until done. Serve hot with chapathi,
+          rice, puttu, pathiri, or your favourite meal.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Varutharacha Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/chanapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Chana Masala Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50 grams (Serves 2–3 persons) / 100
+          grams (Serves 4–5 persons)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          Heat oil in a pressure cooker and sauté freshly chopped onions and
+          green chillies until soft. Add Saro’s Premix, water, salt, and soaked
+          chickpeas (soaked for 6 hours). Mix well. Pressure cook until the
+          first whistle. Then lower the flame and cook for 4 more whistles. Once
+          the pressure is released, simmer until the gravy thickens to your
+          desired consistency. Serve hot with poori, jeera rice, bhatura,
+          chapathi, or rice.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Chana Masala Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/kurumapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Kuruma Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50 grams (Serves 2–3 persons) / 100
+          grams (Serves 4–5 persons)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          Heat ghee, butter, or oil in a pan and sauté chopped onions, green
+          chillies, and your choice of vegetables / chicken / paneer for 2–3
+          minutes. Add Saro’s Premix along with salt and water. For a richer
+          taste, add coconut milk or milk powder. Cover and cook until
+          everything is well cooked and the gravy thickens. Garnish with fresh
+          curry leaves or coriander leaves. Serve hot with ghee rice, appam,
+          pathiri, chapathi, or rice.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Kuruma Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/kadaipremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Kadai Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50 grams (Serves 2–3 persons) / 100
+          grams (Serves 4–5 persons)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          Heat butter, ghee, or oil in a pan and sauté freshly chopped onions
+          until soft. Add paneer / mushrooms / mixed vegetables / chicken and
+          salt. Stir well for a few minutes. Add Saro’s Premix and cook for 1
+          minute. Add a splash of warm water and cook on medium flame until
+          everything is fully cooked. Stir occasionally and serve hot. Best
+          enjoyed with chapathi, naan, jeera rice, ghee rice, or bread.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Kadai Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/theeyalpremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Theeyal Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50g (Serves 2–3) / 100g (Serves 4–5)
+        </p>
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage:</strong> Keep refrigerated. Store airtight after
+          opening. Store in an airtight container for best results.
+        </p>
+
+        <p>
+          Cooking Instructions: Heat 1 tbsp coconut oil and sauté 200-250
+          shallots for 3–4 minutes. Add 50g Saro's Theeyal Premix and 400–450ml
+          water. Add salt to taste and bring to a boil. Simmer for 12–15 minutes
+          until the shallots are tender and the gravy thickens. Serve hot with
+          steamed rice.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Theeyal Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/moringapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Millet-Moringa Soup</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 250g / 500g / 1kg (Servings vary)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 1 month</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          Empty 1 sachet / 1.5 tbsp of Saro’s Millet–Moringa Soup into a cup or
+          bowl. Add 1 cup of room-temperature water and mix well until smooth.
+          Microwave for 1 minute 10 seconds or cook on stovetop for 2–3 minutes
+          while stirring gently.
+        </p>
+
+        <p>Serve hot and enjoy a warm, wholesome bowl of goodness anytime.</p>
+
+        <p>
+          For a richer taste, add a splash of milk or coconut milk before
+          cooking.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Millet Moringa Soup"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ FOOTER -->
+    <div class="footer">© 2026 Saro's Wellness</div>
+  </body>
+</html>

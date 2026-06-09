@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Care & Quality - Saro's Wellness</title>
+
+    <!-- ✅ GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ✅ BODY */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f3f1ea;
+        color: #264d36;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+        padding: 10px 30px;
+        box-sizing: border-box;
+
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(6px);
+
+        z-index: 1000;
+      }
+
+      /* ✅ LOGO */
+      .logo img {
+        height: 185px;
+        object-fit: contain;
+        position: relative;
+        top: 10px;
+        left: -10px;
+      }
+
+      /* ✅ NAV FIX */
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      nav a {
+        margin-left: 16px;
+        text-decoration: none;
+        color: #264d36;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      nav a:hover {
+        color: #2e7d32;
+      }
+
+      /* ✅ PAGE START */
+      .page-content {
+        padding-top: 150px;
+      }
+
+      /* ✅ MAIN TITLE */
+      .care-title {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #cfcfcf;
+      }
+
+      .care-title h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 62px;
+        color: #143d2a;
+        margin: 0;
+      }
+
+      /* ✅ SECTION BLOCK */
+      .info-section {
+        width: 90%;
+        margin: 40px auto;
+        padding-bottom: 20px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+
+        border-bottom: none;
+      }
+
+      /* ✅ TEXT */
+      .info-text h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 38px;
+        color: #143d2a;
+        margin-bottom: 20px;
+      }
+
+      .info-text p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #315742;
+      }
+
+      /* ✅ IMAGE */
+      .info-image img {
+        width: 100%;
+        border-radius: 24px;
+        object-fit: cover;
+
+        transition: 0.4s ease;
+      }
+
+      .info-image img:hover {
+        transform: scale(1.02);
+      }
+
+      /* ✅ DELIVERY POLICY */
+      .delivery-policy {
+        width: 90%;
+        margin: 80px auto 40px;
+
+        border-top: 1px solid #d7d7d7;
+        padding-top: 40px;
+      }
+
+      /* TITLE */
+      .delivery-policy h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 58px;
+        color: #143d2a;
+        margin-bottom: 50px;
+      }
+
+      /* GRID */
+      .policy-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+      }
+
+      /* CARD */
+      .policy-card h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        color: #143d2a;
+        margin-bottom: 15px;
+      }
+
+      .policy-card p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #315742;
+      }
+
+      /* ✅ RESPONSIVE */
+      @media (max-width: 768px) {
+        .delivery-policy h1 {
+          font-size: 46px;
+        }
+
+        .policy-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .bottom-info {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+
+      /* ✅ FOOTER */
+      .footer {
+        text-align: center;
+        padding: 25px;
+        background: #2e7d32;
+        color: white;
+        margin-top: 50px;
+      }
+
+      /* ✅ MOBILE */
+      @media (max-width: 768px) {
+        .care-title h1 {
+          font-size: 52px;
+        }
+
+        .info-section {
+          grid-template-columns: 1fr;
+        }
+
+        .info-text h2 {
+          font-size: 38px;
+        }
+
+        nav a {
+          margin-left: 12px;
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ✅ HEADER -->
+    <header>
+      <div class="logo">
+        <img src="images/banner.jpg" />
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="careandquality.html">Care & Delivery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contactus.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <div class="page-content">
+      <!-- ✅ TITLE -->
+      <section class="care-title">
+        <h1>Care & Quality</h1>
+      </section>
+
+      <!-- ✅ PACKAGING + STORAGE -->
+      <section class="info-section">
+        <!-- LEFT CONTENT -->
+        <div class="info-text">
+          <h2>Packaging</h2>
+
+          <p>
+            Our products come in premium stand-up pouches that are airtight and
+            resealable. This maintains freshness and makes storage convenient.
+            Each order includes 3-layer protection and food-grade silica pouches
+            for moisture control during transit.
+          </p>
+
+          <br /><br />
+
+          <h2>Important Storage Instructions</h2>
+
+          <p>
+            IMPORTANT: Keep refrigerated. As our products contain no
+            preservatives, please ensure the pack is tightly closed after each
+            use and stored in an airtight container for the best results.
+          </p>
+        </div>
+
+        <!-- ✅ COMMON IMAGE -->
+        <div class="info-image">
+          <img src="images/storage.jpg" />
+        </div>
+      </section>
+
+      <!-- ✅ DELIVERY & RETURN POLICY -->
+      <section class="delivery-policy">
+        <h1>Delivery & Return Policy</h1>
+
+        <div class="policy-grid">
+          <!-- DELIVERY -->
+          <div class="policy-card">
+            <h2>Delivery Services</h2>
+
+            <p>
+              We partner with trusted delivery services to ensure your orders
+              arrive safely. Please inspect your order upon arrival and report
+              any damage immediately, as orders are deemed to be in good
+              condition once accepted.
+            </p>
+          </div>
+
+          <!-- DELIVERY TIME -->
+          <div class="policy-card">
+            <h2>Delivery Time</h2>
+
+            <p>
+              Timelines vary by location. Most orders are safely delivered
+              within 3–7 business days.
+            </p>
+          </div>
+
+          <!-- RETURNS -->
+          <div class="policy-card">
+            <h2>Return Policy</h2>
+
+            <p>
+              Due to the perishable nature of our food items, we cannot accept
+              returns. If you have issues, please contact us for assistance.
+              Shipping discrepancies are reviewed individually and require a
+              package opening video.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ✅ CLOSE page-content -->
+
+    <!-- ✅ FOOTER -->
+    <div class="footer">© 2026 Saro's Wellness</div>
+  </body>
+</html>

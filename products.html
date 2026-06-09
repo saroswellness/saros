@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Products - Saro's Wellness</title>
+
+    <!-- ✅ GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ✅ BODY */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f4f5f1;
+        padding-top: 140px;
+      }
+
+      /* ✅ HEADER*/
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 130px;
+        padding: 10px 30px;
+        box-sizing: border-box;
+
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(6px);
+
+        z-index: 1000;
+      }
+
+      /* ✅ LOGO */
+      .logo img {
+        height: 185px;
+        object-fit: contain;
+        position: relative;
+        top: 10px;
+        left: -10px;
+      }
+
+      /* ✅ NAV FIX */
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      nav a {
+        margin-left: 16px;
+        text-decoration: none;
+        color: #264d36;
+        font-weight: 500;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      nav a:hover {
+        color: #2e7d32;
+      }
+
+      /* ✅ HERO */
+      .products-hero {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .products-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 48px;
+        color: #264d36;
+      }
+
+      .products-hero p {
+        color: #4b5f52;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      /* ✅ RECIPE BLOCK */
+      .recipe-block {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 40px;
+
+        width: 90%;
+        margin: 50px auto;
+
+        align-items: start;
+      }
+
+      /* ✅ IMAGE */
+      .recipe-image img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      /* ✅ DETAILS */
+      .recipe-details h2 {
+        font-family: "Playfair Display", serif;
+        color: #264d36;
+        font-size: 32px;
+      }
+
+      .recipe-details p {
+        font-size: 15px;
+        color: #2e5d3b;
+        line-height: 1.6;
+        margin: 8px 0;
+      }
+
+      /* ✅ BUTTON */
+      .order-btn {
+        display: inline-block;
+        margin-top: 20px;
+
+        background: #1f4d2b;
+        color: white;
+
+        padding: 12px 25px;
+        border-radius: 30px;
+
+        text-decoration: none;
+        font-weight: 500;
+
+        transition: 0.3s;
+      }
+
+      .order-btn:hover {
+        transform: scale(1.05);
+        background: #163922;
+      }
+
+      /* ✅ FOOTER */
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background: #2e7d32;
+        color: white;
+      }
+
+      /* ✅ MOBILE */
+      @media (max-width: 768px) {
+        .recipe-block {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ✅ HEADER -->
+    <header>
+      <div class="logo">
+        <img src="images/banner.jpg" />
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="careandquality.html">Care & Delivery</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contactus.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <!-- ✅ HERO -->
+    <section class="products-hero">
+      <h1>Products</h1>
+      <p>
+        Explore our complete range of authentic Kerala premixes and wellness
+        snacks. Our brochure-style product cards provide detailed preparation
+        methods and nutritional information.
+      </p>
+    </section>
+
+    <!-- ✅ BIRIYANI -->
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/biriyanipremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Biriyani Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50g (Serves 2–3) / 100g (Serves 4–5)
+        </p>
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage:</strong> Keep refrigerated. Store airtight after
+          opening. Store in an airtight container for best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong>Onion, Coriander, Turmeric and Chilli
+          Powders, Fennel, Tomato, Cumin, Caraway seeds, Cinnamon, Clove,
+          Nutmeg, Cardamom, Garam Masala, Poppy Seeds, Bay Leaf, Mint Leaves,
+          Coriander Leaves, Saffron, Citric Acid, Vinegar, Ghee
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Biriyani Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ SAMBAR -->
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/sambarpremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Sambar Premix</h2>
+
+        <p><strong>Approx. Weight:</strong> 50g / 100g</p>
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage:</strong> Keep refrigerated. Ensure the pack is
+          tightly closed after use. Store in an airtight container for best
+          results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Toor Dal, Onion, Tomato, Tamarind,
+          Coriander, Turmeric, Red Chillies, Asafoetida, Fenugreek, Roasted
+          Coconut, Garlic, Ginger, Red Chilly Powder, Mustard Seeds, Curry
+          Leaves, Edible oil
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Sambar Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ VARUTHARACHA -->
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/vartharchapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Varutharacha Curry Premix</h2>
+        <p><strong>Approx. Weight:</strong> 50g / 100g</p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+        <p>
+          <strong>Storage:</strong> Keep refrigerated. Ensure the pack is
+          tightly closed after use. Store in an airtight container for best
+          results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Roasted Coconut, Shallots, Fried Onion,
+          Coriander, Chilli Powder, Ginger, Garlic, Fennel Seeds, Turmeric,
+          Black Pepper, Curry Leaves, Garam Masala, Edible Vegetable Oil, Salt
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Varutharacha Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/chanapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Chana Masala Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50 grams (Serves 2–3 persons) / 100
+          grams (Serves 4–5 persons)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Chickpeas, Onion, Dry coconut, Tomato,
+          Coriander, Cumin, Fennel, Red Chillies, Garlic, Ginger, Amchur, Salt,
+          Kasuri Methi, Black Pepper, Cinnamon, Clove, Coriander Leaves, Black
+          Cardamom, Bay Leaf, Ajwain, Turmeric Powder
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Chana Masala Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/kurumapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Kuruma Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50 grams (Serves 2–3 persons) / 100
+          grams (Serves 4–5 persons)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Copra, Onion, Cashew, Sunflower Seeds,
+          Coriander, Fennel, Cumin, Green Chilli, Ginger, Garlic, Turmeric,
+          Black Pepper, Cinnamon, Clove, Cardamom, Curry Leaves, Coriander
+          Leaves, Garam Masala, Salt
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Kuruma Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/kadaipremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Kadai Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50 grams (Serves 2–3 persons) / 100
+          grams (Serves 4–5 persons)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Onion, Tomato, Capsicum, Ginger, Garlic,
+          Edible Vegetable Oil, Coriander, Cumin, Kashmiri Chilli, Red Chilli,
+          Turmeric, Garam Masala, Kasuri Methi, Black Pepper, Salt
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Kadai Premix"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/moringapremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Millet-Moringa Soup</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 250g / 500g / 1kg (Servings vary)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 1 month</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Roasted Ragi, Cashew, Pumpkin Seeds,
+          Onion, Garlic, Ginger, Pepper, Italian herbs, Salt
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Millet Moringa Soup"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/theeyalpremix.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Theeyal Premix</h2>
+
+        <p>
+          <strong>Approx. Weight:</strong> 50 grams (Serves 2–3 persons) / 100
+          grams (Serves 4–5 persons)
+        </p>
+
+        <p><strong>Shelf Life:</strong> 5 months</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Roasted Coconut, Coriander, Red Chilli,
+          Tamarind Powder, Roasted Rice Powder, Black Pepper, Dried Curry
+          Leaves, Mustard Seeds, Fennel, Cumin, Fenugreek Seeds, Turmeric,
+          Jaggery, Asafoetida.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Millet Moringa Soup"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/wellnessladoonosugar.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Wellness Ladoo (No Added Sugar)</h2>
+
+        <p><strong>Approx. Weight:</strong> 250 grams / 500 grams / 1 KG</p>
+
+        <p><strong>Shelf Life:</strong> 1 month</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Almond, Cashew, Sunflower Seeds, Melon
+          Seeds, Sesame Seeds, Flaxseed (Alsi), Whey Protein (no added sugar),
+          Raisins, Jaggery, Honey, Dates, Ghee, Cardamom
+        </p>
+
+        <p>
+          <strong>Declaration:</strong> Contains natural sugars. Check all the
+          ingredients carefully.
+        </p>
+
+        <a
+          href="https://wa.me/916238198001?text=I want to order Wellness Ladoo (No Added Sugar)"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <section class="recipe-block">
+      <div class="recipe-image">
+        <img src="images/milletcookie.jpg" />
+      </div>
+
+      <div class="recipe-details">
+        <h2>Millet Cookies (No Added Sugar)</h2>
+
+        <p><strong>Approx. Weight:</strong> 250 grams / 500 grams / 1 KG</p>
+
+        <p><strong>Shelf Life:</strong> 2 weeks</p>
+
+        <p>
+          <strong>Storage Instructions:</strong> Keep refrigerated. Ensure the
+          pack is tightly closed after use. Store in an airtight container for
+          best results.
+        </p>
+
+        <p>
+          <strong>Ingredients:</strong> Roasted Ragi, Wheat Flour, Cashew,
+          Pumpkin Seeds, Almond, Sunflower Seeds, Museli, Powdered sugar,
+          Cardamom, Whey protein, Baking Powder, Baking soda, Butter, Coconut
+          oil
+        </p>
+
+        <p>
+          <strong>Declaration:</strong> Contains nuts, cocoa, etc. Check all the
+          ingredients carefully.
+        </p>
+        <a
+          href="https://wa.me/916238198001?text=I want to order Millet Cookies (No Added Sugar)"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ FOOTER -->
+    <div class="footer">© 2026 Saro's Wellness</div>
+  </body>
+</html>
